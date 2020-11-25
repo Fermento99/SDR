@@ -1,0 +1,1 @@
+Animacje: folder zawierający nanimacjie do streama z WGF 10
