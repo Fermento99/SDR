@@ -4,6 +4,7 @@
 }
 
 body {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -45,58 +46,54 @@ p {
     height: 2.1em;
     opacity: 0;
     clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100% );
-    animation: slide-end 15s ease-out .5s;
+    animation: slide-end 1.5s ease-out .5s forwards;
 }
 
 #current-content {
     background-color: #555;
     color: white;
-    animation: slide-current 15s ease-out .5s;
+    animation: slide-current 1.5s ease-out .5s forwards;
 }
 
 #next-content {
     background-color: lightgray;
     color: black;
-    animation: slide-next 15s ease-out .5s;
+    animation: slide-next 1.5s ease-out .5s forwards;
 }
 
 @keyframes slide-end{
-    0%, 100% {
+    0%{
         opacity: 0;
     }
-    2%, 98% {
+    10%, 100%{
         opacity: 100%;
     }
 }
 
 @keyframes slide-current{
-    0%, 100% {
+    0%{
         width: 0;
         opacity: 0;
     }
-    2%, 98% {
+    10%{
         opacity: 0;
     }
-    7%, 93% {
+    100%{
         opacity: 100%;
-    }
-    15%, 85% {
-        width: 17em
-    }   
+        width: 17em;
+    }  
 }
 
 @keyframes slide-next{
-    0%, 100% {
+    0%{
         width: 0;
         opacity: 0;
     }
-    2%, 98% {
+    10%{
         opacity: 0;
     }
-    7%, 93% {
+    100%{
         opacity: 100%;
-    }
-    15%, 85% {
         width: 20em;
-    }   
+    }  
 }
